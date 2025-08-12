@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- tambahkan ini -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- jika pakai CDN (content delivery network) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+        <!-- copy bagian script pada akhir body -->
+        <!-- suatu bagian mungkin memiliki CDN lain yg harus ditambahkan juga, contoh Popper -->
+
+        <!-- tambahkan CDN bootstrap icon (lihat bagian install) -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+        <!-- jika download local, maka add style seperti biasa -->
+        <link rel="stylesheet" href="styles.css">
+
+        <title> zo*-*d </title>
+
+    </head>
+    <body>
+
+        <br><br>
+        <!-- navbar -->
+        <nav class="navbar 
+                    navbar-light 
+                    bg-primary-subtle
+                    navbar-expand-lg
+                    py-3
+                    position-fixed top-0 start-0 end-0
+                    z-1">
+                    <!-- atur position fixed di atas dan mentok kanan kiri -->
+                    <!-- z = z-indeks, agar berada di atas yg lainnya -->
+                    <!-- expandnya harus hanya muncul setelah melewati batas -lg dan lebih besar -->
+          <div class="container">
+          <a href="#" class="navbar-brand text-primary-emphasis ps-2"> Guardian of The World </a>
+
+          <!-- tambahkan button hamburger -->
+          <!-- toggle : menyembunyikan dan menampilkan sesuatu -->
+          <button class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navmenuu"
+          >
+            <!-- toggle nya adalah collapse : sembunyi, pastikan class ini ada di navmenuu -->
+            <!-- targetnya : id navmenuu -->
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+            <div id="navmenuu" class="collapse navbar-collapse">
+            <!-- collapse agar nav-link hilang -->
+              <ul class="navbar-nav ms-auto">
+              <!-- agar nav-link pindah ke kanan, ms(margin-start). me(margin-end) -->
+                <li class="nav-item">
+                  <a href="services" class="nav-link"> Services </a>
+                </li>
+                <li class="nav-item">
+                  <a href="enroll" class="nav-link"> Enroll </a>
+                </li>
+                <li class="nav-item">
+                  <a href="contact" class="nav-link"> Contact </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <!-- header -->
+        <section class="header text-center text-sm-start ps-sm-3">
+          <div class="container">
+            
+            <div class="d-block d-sm-flex align-items-center">
+            <!-- initial display : block sehingga image di bawah -->
+            <!-- ketika small dan lebih besar, display sepertii sebelumnya -->
+
+              <!-- tulisan & tombol -->
+              <div>
+                 
+                <!-- tulisan -->
+                 <h4> <span class="text-primary"> Let's </span> be Together, <span class="text-primary"> Let </span> this World be Happier </h4>
+                 <p class="lead"> Together we make this world be safer place, keep the nature as well as the ecosystem within it </p>
+              
+                <!-- tambahkan button -->
+                 <button class="btn btn-secondary d-none d-sm-block">
+                   Let's Get Started 
+                 </button>
+               
+              </div>
+
+               <!-- image -->
+               <img src="sword.svg" 
+                   alt="sword"
+                   class="img-fluid w-50
+                          d-sm-block ms-3">
+               
+               <button class="btn btn-secondary d-block d-sm-none container mt-3">
+                   Let's Get Started 
+               </button>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- grid card (bootstrap-component-card) -->
+        <section id="services" class="py-4">
+          <div class="container">
+            <!-- buat grid -->
+            <div class="row g-3 text-center">
+            <!-- g = gutter / ruang kosong antarcard -->
+
+              <!-- isi kolom dengan card -->
+              <!-- card 1 -->
+              <div class="col-md">
+                <!-- akan menjadi kolom saat melewati batas medium, jika < md urut ke bawah seperti biasa -->
+                <div class="card bg-success-subtle border-0">
+                  <!-- border-0, agar border cardnya hilang -->
+                  <img src="environment.svg" class="card-img-top" alt="environment">
+                  <div class="card-body">
+                    <h5 class="card-title">Reforestation</h5>
+                    <p class="card-text"> Don't let the forest broken </p>
+                    <a href="#" class="btn btn-secondary"> Plant </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 2 -->
+              <div class="col-md">
+                <div class="card bg-info-subtle border-0">
+                  <img src="forest.svg" class="card-img-top" alt="environment">
+                  <div class="card-body">
+                    <h5 class="card-title">World's Lungs</h5>
+                    <p class="card-text"> Don't let the world suffer </p>
+                    <a href="#" class="btn btn-info"> Keep </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- card 3 -->
+              <div class="col-md">
+                <div class="card bg-danger-subtle border-0">
+                  <img src="nature.svg" class="card-img-top" alt="environment">
+                  <div class="card-body">
+                    <h5 class="card-title">Nature</h5>
+                    <p class="card-text"> Take care of it </p>
+                    <a href="#" class="btn btn-danger"> Do It </a>
+                  </div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </section>
+
+        <!-- enroll section -->
+        <section class="bg-secondary-subtle text-primary-emphasis p-5" id="enroll">
+          <div class="container">
+            <div class="d-md-flex justify-content-between align-items-center">
+              <h4 class="d-inline"> Enroll Me </h4>
+
+              <!-- buat kolom input -->
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter your e-mail">
+                <button class="btn btn-secondary btn-lg" type="button"> Submit </button>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- contact section -->
+        <section class="p-5 pt-4" id="contact">
+          <div class="container">
+            <div class="row g-4 align-items-center">
+
+              <div class="col-md">
+                <!-- image (style sama dengan di bagian header)-->
+                <img src="info.svg" 
+                     alt="info"
+                     class="img-fluid w-85
+                            d-sm-block">
+              </div>
+
+              <div class="col-md">
+                <h4 class="text-center mb-4 text-primary-emphasis"> Contact Us </h4>
+                <!-- component-listgroup-flush -->
+                <ul class="list-group list-group-flush lead">
+
+                  <li class="list-group-item">
+                    <!-- letakkan icon dalam class -->
+                    <i class="bi bi-geo-alt"></i>
+                    <!-- i untuk icon -->
+                    <span class="fw-bold"> Location : </span>
+                    <!-- fw = fownt weight -->
+                    Io, Jupiter
+                  </li>
+
+                  <li class="list-group-item">
+                    <i class="bi bi-phone"></i>
+                    <span class="fw-bold"> Phone : </span>
+                    (+42443) 17 114 6236
+                  </li>
+                  <li class="list-group-item"> 
+                    <i class="bi bi-envelope"></i>
+                    <span class="fw-bold"> E-Mail : @iojupiter</span>
+                  </li>
+    
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- footer -->
+        <footer class="p-3 bg-primary-subtle text-center text-primary-emphasis position-relative">
+          <div class="container">
+            <p> Copyright &copy; 3000 <br> Guardian of The World </p>
+          </div>
+
+          <!-- tombol untuk kembali ke atas -->
+          <a href="#" class="position-absolute bottom-0 end-0 p-4">
+          <!-- position ini absolute dan bagian footer diberi relative agar icon ini muncul -->
+            <!-- icon arrow -->
+            <i class="bi bi-arrow-up-square text-dark-emphasis"></i>
+          </a>
+        </footer>
+
+        <!-- CDN Popper dan Bootsrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    
+    </body>
+</html>

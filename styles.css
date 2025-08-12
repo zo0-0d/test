@@ -1,0 +1,18 @@
+/* navbar */
+.navbar { border-bottom-right-radius: 30px; border-bottom: 2px dotted; border-right: 2px dotted; }
+.navbar-brand { font-family: monospace;
+                font-size: larger }
+.navbar-toggler { border-bottom-right-radius: 20px;}
+
+/* header */
+.header { margin-top: 75px }
+
+/* agar tinggi card sama */
+#services img { height : 150px }
+#services img { padding : 15px }
+
+/* arrow up */
+.bi-arrow-up-square { font-size: xx-large }
+
+/* footer */
+footer { border-top-right-radius: 30px; border-top: 2px dotted; border-right: 2px dotted;}
